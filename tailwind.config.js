@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+
   theme: {
+    fontFamily: {
+      "nunito-medium": ["Nunito-Medium"],
+      "nunito-regular": ["Nunito-Regular"],
+      "nunito-bold": ["Nunito-SemiBold"],
+    },
     extend: {
       colors: {
         primary: {

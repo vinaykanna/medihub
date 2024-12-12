@@ -15,7 +15,6 @@ export default defineConfig({
       "@constants": path.resolve(__dirname, "./src/constants"),
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@type-definitions": path.resolve(__dirname, "./src/type-definitions"),
-      "@pages": path.resolve(__dirname, "./src/pages"),
     },
   },
 });
