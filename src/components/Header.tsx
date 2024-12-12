@@ -10,7 +10,7 @@ function Header() {
     return twMerge(
       "px-6 py-2 border-[1px] border-secondary-light border-solid rounded-full bg-white",
       headerItem.path === location.pathname &&
-        "font-medium bg-primary-light border-primary-solid shadow-md",
+        "font-bold bg-primary-light border-primary-solid shadow-md",
       headerItem.title === "Login / Sign In" &&
         "ml-10 font-medium py-3 px-8 bg-gradient-to-tr from-primary-solid to-secondary-solid text-white border-none"
     );
