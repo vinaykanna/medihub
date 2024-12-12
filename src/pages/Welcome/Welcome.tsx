@@ -1,11 +1,11 @@
-import Footer from "@components/Footer";
 import Header from "@components/Header";
+import HeroBanner from "@pages/Welcome/components/HeroBanner";
 
 function Welcome() {
   return (
     <>
       <Header />
-      <Footer />
+      <HeroBanner />
     </>
   );
 }
