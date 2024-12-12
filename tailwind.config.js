@@ -18,6 +18,7 @@ export default {
           light: "#E6EFF6",
           solid: "#7BAED4",
         },
+        grey: "#737373",
       },
     },
   },
