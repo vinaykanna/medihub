@@ -12,6 +12,8 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "./src/services"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@pages": path.resolve(__dirname, "./src/pages"),
+      "@modules": path.resolve(__dirname, "./src/modules"),
+
       "@constants": path.resolve(__dirname, "./src/constants"),
       "@hooks": path.resolve(__dirname, "./src/hooks"),
       "@type-definitions": path.resolve(__dirname, "./src/type-definitions"),
