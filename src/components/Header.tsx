@@ -1,6 +1,6 @@
 import logo from "@assets/images/logo.png";
 import { HeaderItem, headerNav } from "@constants/header.constants";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
 function Header() {
@@ -25,12 +25,12 @@ function Header() {
         <ul className="flex gap-4 align-center">
           {headerNav.map((headerItem, index) => (
             <li key={index} className="mt-4">
-              <a
+              <Link
                 className={headerItemsClassNames(headerItem)}
-                href={headerItem.path}
+                to={headerItem.path}
               >
                 {headerItem.title}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

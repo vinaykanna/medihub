@@ -10,11 +10,11 @@ const headerNav: HeaderItem[] = [
   },
   {
     title: "About",
-    path: "/about",
+    path: "/about-us",
   },
   {
     title: "Contact",
-    path: "/contact",
+    path: "/contact-us",
   },
   {
     title: "Login / Sign In",
