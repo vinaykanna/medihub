@@ -1,4 +1,4 @@
-import logo from "@assets/logo.png";
+import logo from "@assets/images/logo.png";
 import { HeaderItem, headerNav } from "@constants/header.constants";
 import { useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
