@@ -14,7 +14,7 @@ function Footer() {
           <ul className="mt-2">
             {footerNav[0].elements.map((item, index) => (
               <li key={index}>
-                <Link to={item.path} className="text-[#737373]">
+                <Link to={item.path} className="text-[#737373] text-sm">
                   {item.title}
                 </Link>
               </li>
