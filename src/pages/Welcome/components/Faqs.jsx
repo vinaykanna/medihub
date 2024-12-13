@@ -1,7 +1,7 @@
 import { faqs } from "@constants/faqs.constants";
-import chevron from "@assets/images/chevron.svg";
 import { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
+import Chevron from "@assets/icons/Chevron";
 
 function Faqs() {
   return (
@@ -26,12 +26,11 @@ const Faq = ({ faq }) => {
         className="flex gap-4 items-center cursor-pointer"
         onClick={() => setOpen(!open)}
       >
-        <img
-          src={chevron}
+        <Chevron
+          fill="#7AAED3"
           className={twMerge(
             `transition-all duration-300 ${open && "rotate-90"}`
           )}
-          alt=""
         />
         <h2 className="text-primary-solid text-lg">{faq.question}</h2>
       </div>
