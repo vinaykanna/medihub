@@ -60,7 +60,7 @@ const ServiceCard = ({ service }) => {
   );
 };
 
-function NavigationButtons() {
+export function NavigationButtons() {
   return (
     <>
       <button className="custom-prev bg-primary-solid rounded-[30px] px-5 py-3 disabled:opacity-70 absolute left-6 top-1/2 -translate-y-1/2 z-10">

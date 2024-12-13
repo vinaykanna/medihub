@@ -6,6 +6,7 @@ import ContactUs from "@pages/ContactUs/ContactUs";
 import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
 import PrivacyAndPolicy from "@pages/PrivacyAndPolicy/PrivacyAndPolicy";
 import Packages from "./modules/diagnostics/Packages/Packages";
+import PackagesAndLabtests from "./modules/diagnostics/PackagesAndLabtests";
 
 function Router() {
   return (
@@ -17,7 +18,7 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
-        <Route path="/packages" element={<Packages />} />
+        <Route path="/packages-labtests" element={<PackagesAndLabtests />} />
 
       </Routes>
     </BrowserRouter>

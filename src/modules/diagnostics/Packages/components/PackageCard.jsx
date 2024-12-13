@@ -1,41 +1,49 @@
 
-function PackageCard({name,isSponsor,numberOfTest, reportTime,availableAt, fastingTime, price, discount}) {
+function PackageCard({pkg,isSlide=false}) {
+  const { name,isSponsor,numberOfTest, reportTime,availableAt, fastingTime, price, discount} = pkg
   return (
     <div
-    className="shadow-custom flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 w-[586px] gap-[11px] px-4 py-3.5 rounded-2xl bg-white"
+    className="shadow-custom flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 w-full gap-[11px] px-4 py-3.5 rounded-2xl bg-white"
   >
     <div
       className="flex flex-col justify-center items-end self-stretch flex-grow-0 flex-shrink-0 gap-3.5"
     >
       <div
-        className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-4"
+        className="flex flex-col justify-between items-start self-stretch flex-grow-0 flex-shrink-0 gap-4"
       >
         <div
-          className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
+          className="flex flex-col justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2"
         >
           <div
-            className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative"
+            className="flex flex-row justify-between items-start self-stretch flex-grow-0 flex-shrink-0 relative"
           >
             <p
-              className="flex-grow-0 flex-shrink-0 w-[396px] text-2xl font-bold text-left text-[#7baed5]"
+              className="flex-grow-0 flex-shrink-0  text-2xl font-bold text-left text-[#7baed5]"
             >
              {name}
             </p>
-          </div>
-          <div
-            className="flex justify-center items-center flex-grow-0 flex-shrink-0 absolute left-[454px] top-0 gap-2.5 px-3 py-1 rounded-[20px] bg-gradient-to-b from-[#e77e3a] to-[#7baed5]"
+
+            {
+            isSponsor &&  <div
+            className="flex justify-center items-center flex-grow-0 flex-shrink-0  top-0 gap-2.5 px-3 py-1 rounded-[20px] bg-gradient-to-b from-[#e77e3a] to-[#7baed5]"
           >
             <p className="flex-grow-0 flex-shrink-0 text-xs font-bold text-left uppercase text-white">
-              {isSponsor && 'Sponsored'}
+              {'Sponsored'}
             </p>
+
           </div>
+          }
+          </div>
+
+         
         </div>
+
         <div
           className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-2"
         >
           <div className="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0">
             <div
-              className="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[109px] relative gap-1.5"
+              className="flex justify-start items-center flex-grow-0 flex-shrink-0  relative gap-1.5"
             >
               <svg
                 width="24"
@@ -66,7 +74,7 @@ function PackageCard({name,isSponsor,numberOfTest, reportTime,availableAt, fasti
                 viewBox="0 0 22 22"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="flex-grow-0 flex-shrink-0 w-[22px] h-[22px] relative"
+                className="flex-grow-0 flex-shrink-0 h-[22px] relative"
                 preserveAspectRatio="xMidYMid meet"
               >
                 <path
@@ -121,7 +129,7 @@ function PackageCard({name,isSponsor,numberOfTest, reportTime,availableAt, fasti
         >
           <div className="flex justify-end items-center flex-grow-0 flex-shrink-0 gap-5">
             <div
-              className="flex justify-between items-center flex-grow-0 flex-shrink-0 w-[184px] relative"
+              className="flex justify-between items-center flex-grow-0 flex-shrink-0  relative"
             >
               <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#656565]">
                 Available at:
@@ -168,12 +176,12 @@ function PackageCard({name,isSponsor,numberOfTest, reportTime,availableAt, fasti
           <div className="flex justify-end items-center flex-grow-0 flex-shrink-0 gap-5">
             <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative ">
               <p
-                className="flex-grow-0 flex-shrink-0 w-[60px] text-base font-bold text-left text-[#656565]"
+                className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#656565]"
               >
                 Fasting:
               </p>
               <p
-                className="flex-grow-0 flex-shrink-0 w-[76px] h-[21px] text-base font-medium text-right text-[#656565]"
+                className="flex-grow-0 flex-shrink-0 h-[21px] text-base font-medium text-right text-[#656565]"
               >
                 {fastingTime}
               </p>
@@ -194,10 +202,10 @@ function PackageCard({name,isSponsor,numberOfTest, reportTime,availableAt, fasti
            
             
             <div
-              className="flex justify-center items-center flex-grow-0 flex-shrink-0 w-[92px] relative px-1 py-1.5 rounded bg-[#fbe5d8]"
+              className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative px-1 py-1.5 rounded bg-[#fbe5d8]"
             >
               <p
-                className="flex-grow-0 flex justify-center items-center flex-shrink-0 w-[78px] h-[18px] text-lg font-bold text-left text-[#e77e3a]"
+                className="flex-grow-0 flex justify-center items-center flex-shrink-0 h-[18px] text-lg font-bold text-left text-[#e77e3a]"
               >
                 {discount}% OFF
               </p>
