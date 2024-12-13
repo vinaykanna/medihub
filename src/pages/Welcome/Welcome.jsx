@@ -4,6 +4,8 @@ import HeroBanner from "@pages/Welcome/components/HeroBanner";
 import GetInTouch from "@pages/Welcome/components/GetInTouch";
 import Faqs from "@pages/Welcome/components/Faqs";
 import OurServices from "@pages/Welcome/components/OurSevices";
+import Testimonials from "@pages/Welcome/components/Testimonials";
+import HealthConcerns from "@pages/Welcome/components/HealthConcerns";
 
 function Welcome() {
   return (
@@ -11,6 +13,8 @@ function Welcome() {
       <Header className="absolute top-0 left-0 w-full" />
       <HeroBanner />
       <OurServices />
+      <HealthConcerns />
+      <Testimonials />
       <Faqs />
       <GetInTouch />
       <Footer />
