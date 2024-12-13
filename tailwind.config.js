@@ -16,6 +16,7 @@ export default {
         },
         secondary: {
           light: "#E6EFF6",
+          medium: "#BBD6EB",
           solid: "#7BAED4",
         },
         grey: "#737373",

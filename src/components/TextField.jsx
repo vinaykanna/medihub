@@ -7,20 +7,34 @@ function TextField(props) {
     startIcon,
     endIcon,
     fullWidth = true,
+    className = "",
+    inputClassName = "",
+    label,
+    ...rest
   } = props;
   const hasIcon = startIcon || endIcon;
 
   return (
-    <div className={twMerge("relative", fullWidth && "w-full")}>
+    <div className={twMerge("relative", className, fullWidth && "w-full")}>
+      {label && (
+        <label
+          htmlFor={rest.id || rest.name}
+          className="text-primary-solid text-base mb-2 block ml-2"
+        >
+          {label}
+        </label>
+      )}
       <input
         className={twMerge(
           "px-4 py-2 border-[1px] border-primary-solid border-solid rounded-full bg-white outline-none placeholder:text-secondary-solid",
           startIcon && "pl-10",
           endIcon && "pr-10",
-          fullWidth && "w-full"
+          fullWidth && "w-full",
+          inputClassName
         )}
         type={type}
         placeholder={placeholder}
+        {...rest}
       />
       {hasIcon && (
         <span

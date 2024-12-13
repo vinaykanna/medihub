@@ -24,7 +24,9 @@ function Header({ className = "" }) {
       )}
     >
       <div>
-        <img src={logo} className="w-[204px] h-[54px]" />
+        <Link to="/">
+          <img src={logo} className="w-[204px] h-[54px]" />
+        </Link>
       </div>
       <nav>
         <ul className="flex gap-4 align-center">
