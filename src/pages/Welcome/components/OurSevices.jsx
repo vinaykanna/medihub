@@ -9,7 +9,7 @@ import { SERVICES_SWIPER_BREAKPOINTS } from "@pages/Welcome/welcome.constants";
 
 function OurServices() {
   return (
-    <section className="py-20">
+    <section className="pt-10 pb-20">
       <header className="pl-28">
         <h1 className="text-primary-solid text-4xl">Our Services</h1>
         <p className="text-secondary-solid text-base mt-2">

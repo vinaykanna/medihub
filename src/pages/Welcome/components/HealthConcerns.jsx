@@ -2,16 +2,17 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import arrow from "@assets/images/arrow.svg";
 import { twJoin, twMerge } from "tailwind-merge";
 import { HEALTH_CONCERNS } from "@constants/health-concerns.constants";
 import { HEALTH_CONCERNS_SWIPER_BREAKPOINTS } from "@pages/Welcome/welcome.constants";
 import Chevron from "@assets/icons/Chevron";
+import Stats from "@pages/Welcome/components/Stats";
 
 function HealthConcerns() {
   return (
-    <section className="py-8 bg-gradient-to-b from-secondary-light from-10%">
-      <header className="pl-28">
+    <section className="py-8 bg-gradient-to-b from-secondary-light from-10% mt-20">
+      <Stats />
+      <header className="pl-28 mt-24">
         <h1 className="text-primary-solid text-4xl">
           Consult Now for any health concern
         </h1>
