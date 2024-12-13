@@ -8,7 +8,7 @@ import Tag from '../Packages/components/Tag'
 
 function Labtests() {
   return (
-    <div className="px-24 flex flex-col bg-gradient-to-b from-[#e5eff7] to-white  ">
+    <div className="px-24 mb-10 flex flex-col bg-gradient-to-b from-[#e5eff7] to-white  ">
       <p className="text-[40px] font-bold text-left text-[#e77e3a] py-4">
         Book Lab Tests
       </p>
