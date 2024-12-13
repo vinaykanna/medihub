@@ -1,9 +1,9 @@
 import loginHero from "@assets/images/login_hero.svg";
 import TextField from "@components/TextField";
 import Header from "@components/Header";
-import { twMerge } from "tailwind-merge";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
+import { twJoin } from "tailwind-merge";
 
 function Login() {
   const handleSubmit = (e) => {
@@ -11,19 +11,34 @@ function Login() {
   };
   return (
     <>
-      <section className="w-full min-h-screen bg-gradient-to-b from-primary-light from-10%">
+      <section
+        className={twJoin(
+          "w-full min-h-screen",
+          "bg-gradient-to-b from-primary-light from-10%"
+        )}
+      >
         <Header />
-        <div className="max-w-[1087px] px-4 w-full mx-auto flex justify-between text-center items-center mt-10 gap-32">
+        <div
+          className={twJoin(
+            "max-w-[1087px] px-4 w-full mx-auto mt-10",
+            "flex justify-between text-center items-center gap-32"
+          )}
+        >
           <article className="max-[400px] w-1/2">
             <img src={loginHero} alt="" />
           </article>
-          <article className="max-[400px] w-1/2 bg-white rounded-3xl py-7 px-10 shadow-[0_4px_20px_0px_#E77E3A33]">
+          <article
+            className={twJoin(
+              "max-[400px] w-1/2 py-7 px-10 bg-white",
+              "rounded-3xl shadow-[0_4px_20px_0px_#E77E3A33]"
+            )}
+          >
             <form onSubmit={handleSubmit}>
               <header>
-                <h1 className="text-2xl leading-[40px] font-nunito-bold text-primary-solid">
+                <h1 className="text-3xl leading-[40px] font-nunito-bold text-primary-solid">
                   Corporate Login
                 </h1>
-                <p className="text-secondary-solid text-base mt-2">
+                <p className="text-secondary-solid font-nunito-bold text-base mt-2 font-bold">
                   Your Digital Health Hub
                 </p>
               </header>
@@ -36,6 +51,7 @@ function Login() {
                   autoFocus
                   required
                   type="email"
+                  inputClassName="placeholder:text-[#BDBDBD]"
                 />
                 <TextField
                   id="password"
@@ -44,6 +60,7 @@ function Login() {
                   className="text-left mt-5"
                   required
                   type="password"
+                  inputClassName="placeholder:text-[#BDBDBD]"
                 />
                 <Button type="submit" className="w-full mt-7">
                   Login
