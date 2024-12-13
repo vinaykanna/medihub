@@ -1,4 +1,4 @@
-import { FooterItem, footerNav } from "@constants/footer.constants";
+import { footerNav } from "@constants/footer.constants";
 import logo from "@assets/images/logo.png";
 import facebook from "@assets/images/facebook.svg";
 import twitter from "@assets/images/twitter.svg";
@@ -65,13 +65,7 @@ const SocialLogos = () => {
   );
 };
 
-const FooterNavSection = ({
-  className = "",
-  footerItem,
-}: {
-  className?: string;
-  footerItem: FooterItem;
-}) => {
+const FooterNavSection = ({ className = "", footerItem }) => {
   return (
     <div className={className}>
       <h4 className="font-medium text-lg font-nunito-bold">

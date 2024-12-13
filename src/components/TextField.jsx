@@ -1,13 +1,6 @@
 import { twMerge } from "tailwind-merge";
 
-type Props = {
-  type?: string;
-  placeholder?: string;
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
-  fullWidth?: boolean;
-};
-function TextField(props: Props) {
+function TextField(props) {
   const {
     type = "text",
     placeholder = "",

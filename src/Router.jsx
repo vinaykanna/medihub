@@ -1,8 +1,12 @@
-import AboutUs from "@pages/AboutUs/AboutUs";
-import ContactUs from "@pages/ContactUs/ContactUs";
-import Login from "@pages/Login/Login";
-import Welcome from "@pages/Welcome/Welcome";
+// import AboutUs from "@pages/AboutUs/AboutUs.jsx";
+// import ContactUs from "@pages/ContactUs/ContactUs.jsx";
+// import Login from "@pages/Login/Login.jsx";
+// import Welcome from "@pages/Welcome/Welcome.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome/Welcome";
+import AboutUs from "./pages/AboutUs/AboutUs";
+import Login from "./pages/Login/Login";
+import ContactUs from "./pages/ContactUs/ContactUs";
 
 function Router() {
   return (

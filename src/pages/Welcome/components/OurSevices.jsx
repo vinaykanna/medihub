@@ -30,7 +30,7 @@ function OurServices() {
           slidesOffsetAfter={20}
           breakpoints={SERVICES_SWIPER_BREAKPOINTS}
         >
-          {SERVICES?.map((service: any, index: number) => {
+          {SERVICES?.map((service, index) => {
             return (
               <SwiperSlide key={index}>
                 <ServiceCard service={service} />
@@ -44,7 +44,7 @@ function OurServices() {
   );
 }
 
-const ServiceCard = ({ service }: any) => {
+const ServiceCard = ({ service }) => {
   return (
     <div
       className={twMerge(

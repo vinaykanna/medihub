@@ -16,8 +16,8 @@ function Faqs() {
   );
 }
 
-const Faq = ({ faq }: any) => {
-  const answerRef = useRef<HTMLDivElement | null>(null);
+const Faq = ({ faq }) => {
+  const answerRef = useRef(null);
   const [open, setOpen] = useState(false);
 
   return (
