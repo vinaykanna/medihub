@@ -7,8 +7,8 @@ const SERVICES = [
     img: onlineConsultatioSevice,
   },
   {
-    title: "Online Consultation",
-    desc: "Get expert medical advice from the comfort of your home.",
+    title: "Diagnostics",
+    desc: "for developent testing only",
     img: onlineConsultatioSevice,
   },
   {

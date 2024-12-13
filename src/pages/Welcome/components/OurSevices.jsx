@@ -6,6 +6,7 @@ import { SERVICES } from "@constants/services.constants";
 import arrow from "@assets/images/arrow.svg";
 import { twMerge } from "tailwind-merge";
 import { SERVICES_SWIPER_BREAKPOINTS } from "@pages/Welcome/welcome.constants";
+import { useNavigate } from "react-router-dom";
 
 function OurServices() {
   return (
@@ -45,11 +46,19 @@ function OurServices() {
 }
 
 const ServiceCard = ({ service }) => {
+  const navigate = useNavigate()
+
+  const handleNavigate = (service) => {
+    service.title === 'Diagnostics' &&  navigate('/diagnostics/packages-and-labtests')
+  }
+  
   return (
     <div
       className={twMerge(
         "p-5 border-[1px] border-primary-solid border-solid rounded-2xl cursor-pointer"
       )}
+
+      onClick={()=> handleNavigate(service)}
     >
       <img src={service.img} className="w-full" />
       <h4 className="mt-6 text-primary-solid text-2xl font-bold">
