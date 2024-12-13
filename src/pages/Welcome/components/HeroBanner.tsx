@@ -4,7 +4,11 @@ import location from "@assets/images/location.svg";
 import search from "@assets/images/search.svg";
 function HeroBanner() {
   return (
-    <section className="w-full h-[695px] px-24 flex items-center gap-5 justify-between">
+    <section
+      className="w-full h-[695px] px-24 flex items-center gap-5 justify-between
+      bg-gradient-to-b from-primary-light from-10%
+    "
+    >
       <article className="flex-1">
         <h1 className="text-4xl leading-[50px] font-nunito-bold text-primary-solid">
           Providing Quality Healthcare <br />{" "}
