@@ -1,9 +1,4 @@
-type HeaderItem = {
-  title: string;
-  path: string;
-};
-
-const headerNav: HeaderItem[] = [
+const headerNav = [
   {
     title: "Home",
     path: "/",
@@ -22,4 +17,4 @@ const headerNav: HeaderItem[] = [
   },
 ];
 
-export { headerNav, type HeaderItem };
+export { headerNav };

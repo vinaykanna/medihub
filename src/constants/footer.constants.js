@@ -1,12 +1,4 @@
-interface FooterItem {
-  title: string | null;
-  elements: {
-    title: string;
-    path: string;
-  }[];
-}
-
-const footerNav: FooterItem[] = [
+const footerNav = [
   {
     title: null,
     elements: [
@@ -148,4 +140,4 @@ const footerNav: FooterItem[] = [
   },
 ];
 
-export { footerNav, type FooterItem };
+export { footerNav };

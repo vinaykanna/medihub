@@ -46,8 +46,6 @@ function Packages() {
            <Header />
 
             <div className="bg-gradient-to-b from-[#fbe5d8] to-white">
-          
-
                 <div className="w-4/5 m-auto">
 
                     <p className="text-primary-solid text-4xl pt-4">Featured Health Check-up Packages</p>

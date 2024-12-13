@@ -1,12 +1,12 @@
-import logo from "@assets/images/logo.png";
-import { HeaderItem, headerNav } from "@constants/header.constants";
+import logo from "@assets/images/logo.svg";
+import { headerNav } from "@constants/header.constants";
 import { Link, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
-function Header() {
+function Header({ className = "" }) {
   const location = useLocation();
 
-  const headerItemsClassNames = (headerItem: HeaderItem) => {
+  const headerItemsClassNames = (headerItem) => {
     return twMerge(
       "px-6 py-2 border-[1px] border-secondary-light border-solid rounded-full bg-white",
       headerItem.path === location.pathname &&
@@ -17,9 +17,16 @@ function Header() {
   };
 
   return (
-    <header className="py-6 px-24 flex justify-between align-center">
+    <header
+      className={twMerge(
+        "py-6 px-24 flex justify-between align-center",
+        className
+      )}
+    >
       <div>
-        <img src={logo} className="w-[204px] h-[54px]" />
+        <Link to="/">
+          <img src={logo} className="w-[204px] h-[54px]" />
+        </Link>
       </div>
       <nav>
         <ul className="flex gap-4 align-center">
