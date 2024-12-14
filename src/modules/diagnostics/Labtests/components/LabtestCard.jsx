@@ -209,7 +209,7 @@ function LabtestCard({ labTest }) {
             }
           </div>
           <div className="flex justify-end items-center flex-grow-0 flex-shrink-0 gap-5">
-            <div className="flex justify-start items-end flex-grow-0 flex-shrink-0  relative gap-1.5">
+            <div className="flex justify-start items-baseline flex-grow-0 flex-shrink-0  relative gap-1.5">
               <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#656565]">
                 Fasting:
               </p>
@@ -227,8 +227,8 @@ function LabtestCard({ labTest }) {
               ₹{price}/-
             </p>
 
-            <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2.5 px-1 py-1.5 rounded bg-[#fbe5d8]">
-              <p className="flex-grow-0 flex-shrink-0 h-[18px] text-lg font-bold text-left text-[#e77e3a]">
+            <div className="flex justify-center items-center flex-grow-0 relative gap-2.5 px-1 py-1.5 rounded bg-[#fbe5d8]">
+              <p className=" h-[18px] text-lg font-bold text-left text-[#e77e3a]">
                 {discount}% OFF
               </p>
             </div>

@@ -3,6 +3,8 @@ import Packages from './Packages/Packages'
 import Labtests from './Labtests/Labtests'
 import Footer from "@components/Footer";
 import Header from "@components/Header";
+import ConfirmBooking from './ConfirmBooking/ConfirmBooking';
+import PackagesDetails from './Packages/components/PackagesDetails';
 
 function Diagnostics() {
   return (
@@ -10,6 +12,10 @@ function Diagnostics() {
      <Header className='bg-[#fbe9df]' isCart={true} />
      <Packages/>
      <Labtests/>
+
+     {/* <PackagesDetails/> */}
+     {/* <ConfirmBooking/> */}
+     
      <Footer />
     </div>
   )
