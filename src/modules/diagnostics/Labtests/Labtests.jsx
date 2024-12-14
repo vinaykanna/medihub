@@ -14,33 +14,34 @@ function Labtests() {
       </p>
 
 
-      <div className="flex gap-2 flex-wrap mb-4">
+      <div className="flex gap-2 flex-wrap ">
         {
           labTestTags?.map((item, index) => <Tag title={item?.title} isSelected={item?.isSelected} key={index} />)
         }
       </div>
 
-      <div className="flex   gap-5 mt-10">
+      <div className="flex   gap-5 py-8">
 
-<TextField
-    placeholder="Location"
-    startIcon={<img src={location} />}
-/>
-<TextField placeholder="Search" startIcon={<img src={search} />} />
-
-
-<div
-    className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-11 relative gap-2.5 px-5 py-2.5 rounded-[30px] bg-[#e77e3a]"
->
-    <p
-        className="flex-grow-0 flex-shrink-0 h-[26px] text-xl font-medium text-left capitalize text-white"
-    >
-        search
-    </p>
-</div>
+        <TextField
+          placeholder="Location"
+          startIcon={<img src={location} />}
+        />
+        <TextField placeholder="Search" startIcon={<img src={search} />} />
 
 
-</div>
+        <div
+          className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-11 relative gap-2.5 px-5 py-2.5 rounded-[30px] bg-[#e77e3a]"
+        >
+          <p
+            className="flex-grow-0 flex-shrink-0 h-[26px] text-xl font-medium text-left capitalize text-white"
+          >
+            search
+          </p>
+        </div>
+
+
+      </div>
+
       <LabtestList />
 
     </div>

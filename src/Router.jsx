@@ -1,13 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "@pages/Welcome/Welcome";
-import AboutUs from "@pages/AboutUs/AboutUs";
-import Login from "@pages/Login/Login";
-import ContactUs from "@pages/ContactUs/ContactUs";
-import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
-import PrivacyAndPolicy from "@pages/PrivacyAndPolicy/PrivacyAndPolicy";
 import FindADoctor from "@modules/doctor-consultation/FindADoctor/FindaADoctor";
-import Packages from "./modules/diagnostics/Packages/Packages";
-import PackagesAndLabtests from "./modules/diagnostics/PackagesAndLabtests";
+import AboutUs from "@pages/AboutUs/AboutUs";
+import ContactUs from "@pages/ContactUs/ContactUs";
+import Login from "@pages/Login/Login";
+import PrivacyAndPolicy from "@pages/PrivacyAndPolicy/PrivacyAndPolicy";
+import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
+import Welcome from "@pages/Welcome/Welcome";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Diagnostics from "./modules/diagnostics/Diagnostics";
 
 function Router() {
   return (
@@ -23,7 +22,7 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
-        <Route path="/diagnostics/packages-and-labtests" element={<PackagesAndLabtests />} />
+        <Route path="/diagnostics" element={<Diagnostics />} />
 
       </Routes>
     </BrowserRouter>

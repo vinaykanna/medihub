@@ -4,10 +4,10 @@ import Labtests from './Labtests/Labtests'
 import Footer from "@components/Footer";
 import Header from "@components/Header";
 
-function PackagesAndLabtests() {
+function Diagnostics() {
   return (
     <div className="">
-     <Header className='bg-[#fbe9df]'/>
+     <Header className='bg-[#fbe9df]' isCart={true} />
      <Packages/>
      <Labtests/>
      <Footer />
@@ -15,4 +15,4 @@ function PackagesAndLabtests() {
   )
 }
 
-export default PackagesAndLabtests
+export default Diagnostics
