@@ -1,6 +1,6 @@
 import SelectCartButton from "../../Labtests/components/SelectCartButton"
 
-function PackageCard({pkg,isSlide=false}) {
+function PackageCard({pkg,isSlide=false,setIsDrawerOpen}) {
   const { name,isSponsor,numberOfTest, reportTime,availableAt, fastingTime, price, discount} = pkg
   return (
     <div
@@ -91,7 +91,7 @@ function PackageCard({pkg,isSlide=false}) {
           <div
             className="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 h-[30px] relative rounded-[20px]"
           >
-            <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#7baed4]">
+            <p onClick={()=> setIsDrawerOpen(true)} className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#7baed4] cursor-pointer">
               View Test Details
             </p>
             <div

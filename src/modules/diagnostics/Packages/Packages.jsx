@@ -6,10 +6,14 @@ import PackageList from "./components/PackageList";
 import PackageSlider from "./components/PackageSlider";
 import Tag from "./components/Tag";
 import { useState } from "react";
+import Drawer from "../../../components/Drawer";
+import PackagesDetails from "./components/PackagesDetails";
 
 
 function Packages() {
     const [isSlider, setIsSlider] = useState(true)
+    const [isDrawerOpen,setIsDrawerOpen] = useState(false)
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -99,11 +103,11 @@ function Packages() {
             </div>
 
             <div className="px-24">
-                {!isSlider && <PackageList />}
+                {!isSlider && <PackageList setIsDrawerOpen={setIsDrawerOpen}/>}
             </div>
 
             <div className="px-24">
-            {isSlider && <PackageSlider />}
+            {isSlider && <PackageSlider setIsDrawerOpen={setIsDrawerOpen}/>}
 
             </div>
 
@@ -134,6 +138,14 @@ function Packages() {
                     </div>
                 </button>
             </div>
+
+            <Drawer
+                isOpen={isDrawerOpen}
+                onClose={() => setIsDrawerOpen(false)}
+            >
+                <PackagesDetails/>
+               
+            </Drawer>
         </>
     )
 }
