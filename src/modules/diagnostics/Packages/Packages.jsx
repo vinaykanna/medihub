@@ -12,7 +12,7 @@ import PackagesDetails from "./components/PackagesDetails";
 
 function Packages() {
     const [isSlider, setIsSlider] = useState(true)
-    const [isDrawerOpen,setIsDrawerOpen] = useState(false)
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -35,7 +35,6 @@ function Packages() {
 
     return (
         <>
-
             <div className="px-24 flex flex-col bg-gradient-to-b from-[#fbe5d8] to-white ">
 
                 <div className="flex justify-between items-baseline">
@@ -99,15 +98,14 @@ function Packages() {
                         }
                     </div>
                 </div>
-
             </div>
 
             <div className="px-24">
-                {!isSlider && <PackageList setIsDrawerOpen={setIsDrawerOpen}/>}
+                {!isSlider && <PackageList setIsDrawerOpen={setIsDrawerOpen} />}
             </div>
 
             <div className="px-24">
-            {isSlider && <PackageSlider setIsDrawerOpen={setIsDrawerOpen}/>}
+                {isSlider && <PackageSlider setIsDrawerOpen={setIsDrawerOpen} />}
 
             </div>
 
@@ -140,11 +138,12 @@ function Packages() {
             </div>
 
             <Drawer
+                title={'Test Details'}
                 isOpen={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}
+                showIcons={true}
             >
-                <PackagesDetails/>
-               
+                <PackagesDetails />
             </Drawer>
         </>
     )
