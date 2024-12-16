@@ -1,3 +1,4 @@
+import SelectCartButton from "../../Labtests/components/SelectCartButton"
 
 function PackageCard({pkg,isSlide=false}) {
   const { name,isSponsor,numberOfTest, reportTime,availableAt, fastingTime, price, discount} = pkg
@@ -134,6 +135,8 @@ function PackageCard({pkg,isSlide=false}) {
               <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#656565]">
                 Available at:
               </p>
+
+&nbsp;&nbsp;
               <div
                 className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-7 relative gap-1.5 px-1 py-0.5 rounded bg-white"
               >
@@ -171,6 +174,7 @@ function PackageCard({pkg,isSlide=false}) {
                   {availableAt}
                 </p>
               </div>
+
             </div>
           </div>
           <div className="flex justify-end items-center flex-grow-0 flex-shrink-0 gap-5">
@@ -221,28 +225,10 @@ function PackageCard({pkg,isSlide=false}) {
         <div
           className="flex flex-col justify-end items-end flex-grow-0 flex-shrink-0 h-[74px] gap-[15px] pt-1"
         >
-          <div
-            className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-10 relative gap-2.5 px-5 py-1.5 rounded-[25px] bg-[#7baed5]"
-          >
-            <p className="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left text-white">Select</p>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M19 12H12M12 12H5M12 12V5M12 12V19"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
+          
+<SelectCartButton isSelected={true}/>
+
+
         </div>
       </div>
     </div>

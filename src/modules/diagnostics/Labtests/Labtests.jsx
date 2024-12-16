@@ -14,7 +14,7 @@ function Labtests() {
       </p>
 
 
-      <div className="flex gap-2 flex-wrap ">
+      <div className="flex gap-4 flex-wrap ">
         {
           labTestTags?.map((item, index) => <Tag title={item?.title} isSelected={item?.isSelected} key={index} />)
         }

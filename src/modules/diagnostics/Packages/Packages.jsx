@@ -89,7 +89,7 @@ function Packages() {
 
                     </div>
 
-                    <div className="flex gap-2 flex-wrap mb-4">
+                    <div className="flex gap-4 flex-wrap mb-4">
                         {
                             packageTags?.map((item, index) => <Tag title={item?.title} isSelected={item?.isSelected} key={index} />)
                         }
@@ -111,7 +111,7 @@ function Packages() {
                 <button onClick={handleExpandButton} className="flex justify-start items-center flex-grow-0 flex-shrink-0 h-10 relative gap-2.5 px-5 py-[7px] rounded-[30px] bg-white border border-[#e77e3a]">
                     <p className="flex-grow-0 flex-shrink-0 text-lg font-semibold text-left text-[#e77e3a]">
                         {
-                            isSlider ? 'View All' : 'Collapse'
+                            isSlider ? 'View All' : 'View Less'
                         }
                     </p>
                     <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative overflow-hidden gap-2.5 px-[5px] py-px">

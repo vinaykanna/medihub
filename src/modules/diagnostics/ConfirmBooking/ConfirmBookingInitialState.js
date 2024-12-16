@@ -1,9 +1,9 @@
 const initialState = {
-    // Initial data coming into the form
+
     package: [], // Array to hold multiple packages
     labTest: [], // Array to hold multiple lab tests
   
-    // Step navigation and tracking
+
     currentStep: "preferenceSelection", // Possible values: 'preferenceSelection', 'addPatient', 'selectAddress', 'payment'
     steps: [
       { name: "preferenceSelection", active: true, completed: false },
