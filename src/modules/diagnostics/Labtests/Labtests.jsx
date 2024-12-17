@@ -12,10 +12,12 @@ function Labtests() {
       <p className="text-[40px] font-bold text-left text-[#e77e3a] py-4">
         Book Lab Tests
       </p>
-      <div className="flex gap-2 flex-wrap ">
-        {labTestTags?.map((item, index) => (
-          <Tag title={item?.title} isSelected={item?.isSelected} key={index} />
-        ))}
+
+
+      <div className="flex gap-4 flex-wrap ">
+        {
+          labTestTags?.map((item, index) => <Tag title={item?.title} isSelected={item?.isSelected} key={index} />)
+        }
       </div>
       <div className="flex   gap-5 py-8">
         <TextField placeholder="Location" startIcon={<img src={location} />} />

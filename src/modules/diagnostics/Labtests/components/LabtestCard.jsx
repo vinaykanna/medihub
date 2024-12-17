@@ -1,4 +1,5 @@
 import React from 'react'
+import SelectCartButton from './SelectCartButton'
 
 function LabtestCard({ labTest }) {
 
@@ -27,7 +28,7 @@ function LabtestCard({ labTest }) {
             </p>
           </div>
 
-          <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-0.5 py-2.5 border border-[#e77e3a]/20">
+          <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-0.5 py-2.5 border-t border-b border-y-[#e77e3a]/20">
             <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-2">
               <p className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
                 <span className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
@@ -227,8 +228,8 @@ function LabtestCard({ labTest }) {
               ₹{price}/-
             </p>
 
-            <div className="flex justify-center items-center flex-grow-0 relative gap-2.5 px-1 py-1.5 rounded bg-[#fbe5d8]">
-              <p className=" h-[18px] text-lg font-bold text-left text-[#e77e3a]">
+            <div className="flex justify-center items-center flex-grow-0  rounded bg-[#fbe5d8] px-1 py-1.5">
+              <p className="text-lg font-bold text-left text-[#e77e3a]">
                 {discount}% OFF
               </p>
             </div>
@@ -239,33 +240,11 @@ function LabtestCard({ labTest }) {
             </p>
           </div>
         </div>
-        <div className="flex flex-col justify-end items-end flex-grow-0 flex-shrink-0 h-[74px] gap-[15px] pt-1">
-          <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 h-10 relative gap-2.5 px-5 py-1.5 rounded-[25px] bg-[#7baed5]">
-            <p className="flex-grow-0 flex-shrink-0 text-xl font-semibold text-left text-white">
-              Select
-            </p>
-            <svg
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="flex-grow-0 flex-shrink-0 w-6 h-6 relative"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M19 12H12M12 12H5M12 12V5M12 12V19"
-                stroke="white"
-                stroke-width={2}
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-        </div>
+        <SelectCartButton isSelected={false}/>
+   
       </div>
     </div>
-  </div>;
+  </div>
 }
 
 export default LabtestCard
