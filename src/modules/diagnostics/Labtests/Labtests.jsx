@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { labTestTags } from "@constants/diagnostics.constants";
 import LabtestList from "@modules/diagnostics/Labtests/components/LabTestList";
 import location from "@assets/images/location.svg";
 import search from "@assets/images/search.svg";
 import TextField from "@components/TextField";
 import Tag from "@modules/diagnostics/Packages/components/Tag";
+import Drawer from "../../../components/Drawer";
+import LabTestDetails from "./components/LabTestDetails";
 
 function Labtests() {
+  const [isDrawerOpen,setIsDrawerOpen]= useState(false)
   return (
     <div className="px-24 mb-10 flex flex-col bg-gradient-to-b from-[#e5eff7] to-white  ">
       <p className="text-[40px] font-bold text-left text-[#e77e3a] py-4">
@@ -28,7 +31,17 @@ function Labtests() {
           </p>
         </div>
       </div>
-      <LabtestList />
+      <LabtestList setIsDrawerOpen={setIsDrawerOpen}  />
+
+
+      <Drawer
+                title={'Test Details'}
+                isOpen={isDrawerOpen}
+                onClose={() => setIsDrawerOpen(false)}
+                showIcons={true}
+            >
+              <LabTestDetails/>
+            </Drawer>
     </div>
   );
 }

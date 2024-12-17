@@ -1,7 +1,7 @@
 import React from 'react'
 import SelectCartButton from './SelectCartButton'
 
-function LabtestCard({ labTest }) {
+function LabtestCard({ labTest,setIsDrawerOpen }) {
 
   const { testName, testCode, department, method, specimen, numberOFTest, availableAt, price, discount, fastingTime, reportsIn, isSponsor } = labTest
   return <div
@@ -114,7 +114,7 @@ function LabtestCard({ labTest }) {
             </div>
           </div>
           <div className="flex justify-between items-center self-stretch flex-grow-0 flex-shrink-0 h-[30px] relative rounded-[20px]">
-            <p className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#7baed4]">
+            <p onClick={()=> setIsDrawerOpen(true)} className="flex-grow-0 flex-shrink-0 text-base font-bold text-left text-[#7baed4] cursor-pointer">
               View Test Details
             </p>
             <div className="flex justify-center items-center flex-grow-0 flex-shrink-0 relative gap-[5px]">

@@ -157,7 +157,7 @@ function Packages() {
             </div>
 
             <Drawer
-                title={'Test Details'}
+                title={'Package Details'}
                 isOpen={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}
                 showIcons={true}
