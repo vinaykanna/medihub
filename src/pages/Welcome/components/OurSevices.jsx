@@ -33,7 +33,7 @@ function OurServices() {
         >
           {SERVICES?.map((service, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="h-auto">
                 <ServiceCard service={service} />
               </SwiperSlide>
             );
@@ -46,19 +46,19 @@ function OurServices() {
 }
 
 const ServiceCard = ({ service }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleNavigate = (service) => {
-    service.title === 'Diagnostics' &&  navigate('/diagnostics/package')
-  }
-  
+    service.title === "Diagnostics" && navigate("/diagnostics/package");
+  };
+
   return (
     <div
       className={twMerge(
-        "p-5 border-[1px] border-primary-solid border-solid rounded-2xl cursor-pointer"
+        "p-5 border-[1px] border-primary-solid",
+        "border-solid rounded-2xl cursor-pointer h-full"
       )}
-
-      onClick={()=> handleNavigate(service)}
+      onClick={() => handleNavigate(service)}
     >
       <img src={service.img} className="w-full" />
       <h4 className="mt-6 text-primary-solid text-2xl font-bold">

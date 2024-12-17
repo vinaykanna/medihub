@@ -9,7 +9,7 @@ import PackagesDetails from "./Packages/components/PackagesDetails";
 function Diagnostics() {
   return (
     <div className="">
-      <Header className="bg-[#fbe9df]" isCart={true} />
+      <Header className="bg-[#fbe9df]" withCart />
       <Packages />
       <Labtests />
       {/* <PackagesDetails/> */}

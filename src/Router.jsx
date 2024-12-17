@@ -22,8 +22,7 @@ function Router() {
         <Route path="/login" element={<Login />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
-        <Route path="/diagnostics" element={<Diagnostics />} />
-
+        <Route path="/diagnostics/package" element={<Diagnostics />} />
       </Routes>
     </BrowserRouter>
   );

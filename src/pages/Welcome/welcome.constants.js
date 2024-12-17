@@ -8,12 +8,12 @@ const SERVICES_SWIPER_BREAKPOINTS = {
     slidesPerGroup: 3,
   },
   1024: {
-    slidesPerView: 3.5,
-    slidesPerGroup: 3,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
   },
   1440: {
-    slidesPerView: 3.5,
-    slidesPerGroup: 3,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
   },
 };
 

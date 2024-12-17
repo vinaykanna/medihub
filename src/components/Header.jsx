@@ -4,16 +4,17 @@ import { Link, useLocation } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 import Cart from "./Cart";
 
-function Header({ className = "", isCart }) {
+function Header({ className = "", withCart }) {
   const location = useLocation();
 
-  const headerItemsClassNames = (headerItem) => {
+  const headerItemsClassNames = (headerItem, withCart) => {
     return twMerge(
       "px-6 py-2 border-[1px] border-secondary-light border-solid rounded-full bg-white",
       headerItem.path === location.pathname &&
         "font-bold bg-primary-light border-primary-solid shadow-md",
       headerItem.title === "Login / Sign In" &&
-        "ml-10 font-medium py-3 px-8 bg-gradient-to-tr from-primary-solid to-secondary-solid text-white border-none"
+        "ml-10 font-medium py-3 px-8 bg-gradient-to-tr from-primary-solid to-secondary-solid text-white border-none",
+      withCart && headerItem.title === "Login / Sign In" && "ml-0"
     );
   };
 
@@ -41,20 +42,21 @@ function Header({ className = "", isCart }) {
               </Link>
             </li>
           ))}
-
-          {isCart && (
+          {withCart && (
             <li className="mt-4">
               <Cart numOfItems={9} />
             </li>
           )}
-
           <li className="mt-4">
             <Link
-              className={headerItemsClassNames({
-                path: location.pathname,
-                title: "Login / Sign in",
-              })}
-              to={"/login"}
+              className={headerItemsClassNames(
+                {
+                  path: location.pathname,
+                  title: "Login / Sign In",
+                },
+                withCart
+              )}
+              to="/login"
             >
               {"Login / Sign in"}
             </Link>

@@ -2,7 +2,7 @@ import play from "@assets/images/play.svg";
 import { twJoin, twMerge } from "tailwind-merge";
 function Stats() {
   return (
-    <section className="grid grid-cols-5 max-w-[1220px] mx-auto gap-10 -mt-28">
+    <section className="grid grid-cols-5 px-28 mx-auto gap-10 -mt-28">
       <article
         className={twJoin(
           "border-[20px] border-black min-h-[500px] col-span-3",
