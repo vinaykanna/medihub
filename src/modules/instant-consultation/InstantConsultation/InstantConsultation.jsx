@@ -67,7 +67,7 @@ function BookingCard({ data }) {
     <article
       className={twJoin(
         "rounded-3xl shadow-[0px_4px_12px_2px_#7BAED566]",
-        "overflow-hidden bg-secondary-light border-[1px] border-secondary-solid"
+        "overflow-hidden bg-[#F2F7FB] border-[1px] border-secondary-solid"
       )}
     >
       <img src={data?.img} alt="" className="w-full h-[209px]" />
