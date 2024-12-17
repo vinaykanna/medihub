@@ -40,39 +40,11 @@ function PackagesDetails({ handleClose }) {
                         </div>
                     </div>
                     <div className="flex flex-col justify-start  self-stretch flex-grow-0 flex-shrink-0 gap-5">
-                        <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 relative gap-2.5">
-                            <p className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                <span className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                    Specimen:
-                                </span>
-                                <span className="flex-grow-0 flex-shrink-0  text-base font-medium text-left text-[#656565]">
-                                    {" "}
-                                </span>
-                                <span className="flex-grow-0 flex-shrink-0  text-base font-bold text-left text-[#656565]">
-                                    Aliquot of First Void Specimen of Urine
-                                </span>
-                            </p>
-                            <p className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                <span className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                    Department:
-                                </span>
-                                <span className="flex-grow-0 flex-shrink-0  text-base font-bold text-left text-[#656565]">
-                                    {" "}
-                                    Biochemistry
-                                </span>
-                            </p>
-                            <p className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                <span className="flex-grow-0 flex-shrink-0  text-base text-left text-[#656565]">
-                                    Method:
-                                </span>
-                                <span className="flex-grow-0 flex-shrink-0  text-base font-medium text-left text-[#656565]">
-                                    {" "}
-                                </span>
-                                <span className="flex-grow-0 flex-shrink-0  text-base font-bold text-left text-[#656565]">
-                                    CLIA
-                                </span>
-                            </p>
-                        </div>
+                    <div className="flex flex-col justify-start items-start flex-grow-0 flex-shrink-0 w-[458px] relative gap-2.5">
+  <p className="self-stretch flex-grow-0 flex-shrink-0 w-[458px] text-xl font-bold text-left text-[#e77e3a]">
+    Package Includes 59 tests
+  </p>
+</div>
                         <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-2.5">
                             <p className="self-stretch flex-grow-0 flex-shrink-0  text-base font-bold text-left text-[#656565]">
                                 Aliquot of First Void Specimen of Urine
@@ -154,6 +126,8 @@ function PackagesDetails({ handleClose }) {
                     </div>
                 </div>
             </div>
+
+
 
             <div className="flex flex-col justify-center items-start flex-grow-0 flex-shrink-0  gap-6 pt-5 border-t border-r-0 border-b-0 border-l-0 border-[#e38540]/40">
                 <div className="flex flex-col justify-start  self-stretch flex-grow-0 flex-shrink-0 gap-1.5">
