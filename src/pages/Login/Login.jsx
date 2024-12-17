@@ -2,11 +2,11 @@ import loginHero from "@assets/images/login_hero.svg";
 import TextField from "@components/TextField";
 import Header from "@components/Header";
 import { Link } from "react-router-dom";
-import Button from "../../components/Button";
+import Button from "@components/Button";
 import { twJoin } from "tailwind-merge";
 import { useState } from "react";
 import { loginTitles } from "@constants/login.constants";
-import SelectField from "../../components/SelectField";
+import SelectField from "@components/SelectField";
 
 function Login() {
   const [loginType, setLoginType] = useState("corporate");

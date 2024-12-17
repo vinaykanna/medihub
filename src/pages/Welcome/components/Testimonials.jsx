@@ -6,10 +6,10 @@ import {
   TESTIMONIALS,
   TESTIMONIALS_SWIPER_BREAKPOINTS,
 } from "@constants/testimonials.constants";
-import star from "@assets/images/star.svg";
-import starOutlined from "@assets/images/star_outlined.svg";
+
 import { twJoin, twMerge } from "tailwind-merge";
 import Chevron from "@assets/icons/Chevron";
+import Rating from "@components/Rating";
 
 function Testimonials() {
   return (
@@ -70,14 +70,7 @@ const TestimonialCard = ({ testimonial, isActive }) => {
       )}
     >
       <img src={testimonial.img} className="mx-auto" alt="" />
-      <div className="flex items-center gap-2 mt-9 justify-center">
-        {[...Array(testimonial.rating)].map((_, index) => {
-          return <img src={star} alt="" key={index} />;
-        })}
-        {[...Array(5 - testimonial.rating)].map((_, index) => {
-          return <img src={starOutlined} alt="" key={index} />;
-        })}
-      </div>
+      <Rating rating={testimonial.rating} className="mt-9 justify-center" />
       <p className="mt-8 text-[#656565] leading-6">{testimonial.desc}</p>
     </article>
   );

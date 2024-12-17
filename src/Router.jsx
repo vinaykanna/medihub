@@ -6,7 +6,7 @@ import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
 import Welcome from "@pages/Welcome/Welcome";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Diagnostics from "@modules/diagnostics/Diagnostics";
-import InstantConsultation from "@modules/instant-consultation/InstantConsultation";
+import InstantConsultation from "@modules/instant-consultation/InstantConsultation/InstantConsultation";
 import OnlineConsultation from "@modules/instant-consultation/OnlineConsultation/OnlineConsultation";
 import DoctorConsultation from "@modules/instant-consultation/DoctorConsultation/DoctorConsultation";
 import SelectPatient from "@modules/instant-consultation/OnlineConsultation/SelectPatient";

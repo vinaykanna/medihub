@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <main className="p-14 flex justify-between">
+      <main className="p-14 flex justify-between bg-[#FAFAFA]">
         <aside>
           <img src={logo} alt="" className="w-[109px] h-[28px]" />
           <ul className="mt-2">
