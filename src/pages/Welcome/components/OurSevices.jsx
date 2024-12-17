@@ -49,7 +49,7 @@ const ServiceCard = ({ service }) => {
   const navigate = useNavigate();
 
   const handleNavigate = (service) => {
-    service.title === "Diagnostics" && navigate("/diagnostics/package");
+    navigate(service.path);
   };
 
   return (

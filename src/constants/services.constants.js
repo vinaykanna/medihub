@@ -4,7 +4,13 @@ const SERVICES = [
   {
     title: "Online Consultation",
     desc: "Get expert medical advice from the comfort of your home.",
-    path: "/online-consultation",
+    path: "/instant-consultation",
+    img: onlineConsultatioSevice,
+  },
+  {
+    title: "Clinic Consultation",
+    desc: "Get expert medical advice from the comfort of your home.",
+    path: "/instant-consultation",
     img: onlineConsultatioSevice,
   },
   {
@@ -14,13 +20,9 @@ const SERVICES = [
     img: onlineConsultatioSevice,
   },
   {
-    title: "Online Consultation",
+    title: "Pharmacy",
     desc: "Get expert medical advice from the comfort of your home.",
-    img: onlineConsultatioSevice,
-  },
-  {
-    title: "Online Consultation",
-    desc: "Get expert medical advice from the comfort of your home.",
+    path: "/instant-consultation",
     img: onlineConsultatioSevice,
   },
 ];
