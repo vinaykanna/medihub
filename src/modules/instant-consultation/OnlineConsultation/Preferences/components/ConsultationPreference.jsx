@@ -7,9 +7,11 @@ import location from "@assets/images/location2.svg";
 import star from "@assets/images/star.svg";
 import chat from "@assets/images/chat.svg";
 import firstAid from "@assets/images/first_aid.svg";
+import { useNavigate } from "react-router-dom";
 
 function ConsultationPreference() {
   const { state, dispatch } = useOnlineConsultationContext();
+  const navigate = useNavigate();
 
   const handleConsultationPreferenceChange = (value) => {
     dispatch({
@@ -71,6 +73,9 @@ function ConsultationPreference() {
       {state.specialization && state.consultationType && (
         <div className="text-right mt-5">
           <button
+            onClick={() => {
+              navigate("/online-consultation/patient-details");
+            }}
             className={twJoin(
               "bg-primary-solid px-10 rounded-3xl py-2",
               "text-white min-w-[300px]"

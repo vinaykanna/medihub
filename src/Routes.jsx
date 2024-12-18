@@ -13,8 +13,8 @@ import {
 import Diagnostics from "@modules/diagnostics/Diagnostics";
 import InstantConsultation from "@modules/instant-consultation/InstantConsultation/InstantConsultation";
 import DoctorConsultation from "@modules/instant-consultation/DoctorConsultation/DoctorConsultation";
-import SelectPatient from "@modules/instant-consultation/OnlineConsultation/SelectPatient";
-import PaymentDetails from "@modules/instant-consultation/OnlineConsultation/PaymentDetails";
+import PatientDetails from "@modules/instant-consultation/OnlineConsultation/PatientDetails/PatientDetails";
+import PaymentDetails from "@modules/instant-consultation/OnlineConsultation/PaymentDetails/PaymentDetails";
 import BookingSuccess from "@modules/instant-consultation/OnlineConsultation/BookingSuccess";
 import { useEffect } from "react";
 import Home from "@pages/Home/Home";
@@ -40,7 +40,7 @@ function Routes() {
       <Route path="/instant-consultation" element={<InstantConsultation />} />
       <Route path="/online-consultation">
         <Route path="preferences" element={<Preferences />} />
-        <Route path="select-patient" element={<SelectPatient />} />
+        <Route path="patient-details" element={<PatientDetails />} />
         <Route path="payment-details" element={<PaymentDetails />} />
         <Route path="booking-success" element={<BookingSuccess />} />
       </Route>
