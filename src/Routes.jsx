@@ -4,16 +4,21 @@ import Login from "@pages/Login/Login";
 import PrivacyAndPolicy from "@pages/PrivacyAndPolicy/PrivacyAndPolicy";
 import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
 import Welcome from "@pages/Welcome/Welcome";
-import { Route, Routes as Switch, useLocation } from "react-router-dom";
+import {
+  Navigate,
+  Route,
+  Routes as Switch,
+  useLocation,
+} from "react-router-dom";
 import Diagnostics from "@modules/diagnostics/Diagnostics";
 import InstantConsultation from "@modules/instant-consultation/InstantConsultation/InstantConsultation";
-import OnlineConsultation from "@modules/instant-consultation/OnlineConsultation/OnlineConsultation";
 import DoctorConsultation from "@modules/instant-consultation/DoctorConsultation/DoctorConsultation";
 import SelectPatient from "@modules/instant-consultation/OnlineConsultation/SelectPatient";
 import PaymentDetails from "@modules/instant-consultation/OnlineConsultation/PaymentDetails";
 import BookingSuccess from "@modules/instant-consultation/OnlineConsultation/BookingSuccess";
 import { useEffect } from "react";
 import Home from "@pages/Home/Home";
+import Preferences from "@modules/instant-consultation/OnlineConsultation/Preferences/Preferences";
 
 function Routes() {
   const { pathname } = useLocation();
@@ -33,19 +38,12 @@ function Routes() {
       <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
       <Route path="/diagnostics/package" element={<Diagnostics />} />
       <Route path="/instant-consultation" element={<InstantConsultation />} />
-      <Route path="/online-consultation" element={<OnlineConsultation />} />
-      <Route
-        path="/online-consultation/select-patient"
-        element={<SelectPatient />}
-      />
-      <Route
-        path="/online-consultation/payment-details"
-        element={<PaymentDetails />}
-      />
-      <Route
-        path="/online-consultation/booking-success"
-        element={<BookingSuccess />}
-      />
+      <Route path="/online-consultation">
+        <Route path="preferences" element={<Preferences />} />
+        <Route path="select-patient" element={<SelectPatient />} />
+        <Route path="payment-details" element={<PaymentDetails />} />
+        <Route path="booking-success" element={<BookingSuccess />} />
+      </Route>
       <Route path="/doctor-consultation" element={<DoctorConsultation />} />
     </Switch>
   );
