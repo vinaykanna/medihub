@@ -8,11 +8,13 @@ import Tag from "./components/Tag";
 import { useState } from "react";
 import Drawer from "../../../components/Drawer";
 import PackagesDetails from "./components/PackagesDetails";
+import { useNavigate } from "react-router-dom";
 
 
 function Packages() {
     const [isSlider, setIsSlider] = useState(true)
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+    const navigate = useNavigate()
 
     const scrollToTop = () => {
         window.scrollTo({
@@ -32,6 +34,10 @@ function Packages() {
     });
   };
 
+  const handleAppointment = () => {
+    navigate('/diagnostics/preferences')
+  }
+
     return (
         <>
             <div className="px-24 flex flex-col bg-gradient-to-b from-[#fbe5d8] to-white ">
@@ -39,7 +45,7 @@ function Packages() {
                 <div className="flex justify-between items-baseline">
                     <p className="text-primary-solid text-4xl pt-4">Featured Health Check-up Packages</p>
 
-                    <button className="flex justify-center items-center  h-11 relative gap-2.5 px-5 py-2.5 rounded-[30px] bg-[#e77e3a]">
+                    <button onClick={handleAppointment} className="flex justify-center items-center  h-11 relative gap-2.5 px-5 py-2.5 rounded-[30px] bg-[#e77e3a]">
                         <p className="flex-grow-0 flex-shrink-0 text-xl font-medium text-left capitalize text-white">
                             Confirm Appointment
                         </p>

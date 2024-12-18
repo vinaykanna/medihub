@@ -11,7 +11,7 @@ function PatientDetails() {
     <>
       <section className="w-full bg-gradient-to-b from-primary-light from-10%">
         <Header />
-        <div className="px-20 mt-20 mb-10">
+        <div className="">
           <Tabs
             tabItems={[
               {

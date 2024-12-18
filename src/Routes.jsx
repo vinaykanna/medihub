@@ -19,6 +19,7 @@ import BookingSuccess from "@modules/instant-consultation/OnlineConsultation/Boo
 import { useEffect } from "react";
 import Home from "@pages/Home/Home";
 import Preferences from "@modules/instant-consultation/OnlineConsultation/Preferences/Preferences";
+import ConfirmBooking from "@modules/diagnostics/ConfirmBooking/ConfirmBooking";
 
 function Routes() {
   const { pathname } = useLocation();
@@ -36,7 +37,13 @@ function Routes() {
       <Route path="/login" element={<Login />} />
       <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
-      <Route path="/diagnostics/package" element={<Diagnostics />} />
+      <Route path="/diagnostics">
+        <Route path="package" element={<Diagnostics />} />
+        <Route path="preferences" element={<ConfirmBooking />} />
+        <Route path="patient-details" element={<ConfirmBooking />} />
+        <Route path="address-details" element={<ConfirmBooking />} />
+        <Route path="payment-details" element={<ConfirmBooking />} />
+      </Route>
       <Route path="/instant-consultation" element={<InstantConsultation />} />
       <Route path="/online-consultation">
         <Route path="preferences" element={<Preferences />} />
