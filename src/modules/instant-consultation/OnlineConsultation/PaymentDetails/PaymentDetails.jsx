@@ -4,7 +4,8 @@ import Tabs from "@components/Tabs";
 import { useLocation, useNavigate } from "react-router-dom";
 import BookingHeader from "@components/BookingHeader";
 import { useOnlineConsultationContext } from "@contexts/OnlineConsultationContext";
-import BookingCard from "../../../../components/BookingCard";
+import BookingCard from "@components/BookingCard/BookingCard";
+
 function PaymentDetails() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -44,6 +45,20 @@ function PaymentDetails() {
       <BookingCard
         className="mx-20 mt-10 mb-10"
         data={state}
+        continueLabel="Continue and Pay"
+        showContinue={
+          state?.specialization &&
+          state?.consultationType &&
+          state?.patients?.length > 0
+        }
+        showAvailableDoctorDetails={
+          state?.specialization && state?.consultationType
+        }
+        showPatientDetails={state?.patients?.length > 0}
+        showPaymentDetails
+        onContinue={() => {
+          navigate("/online-consultation/booking-success");
+        }}
         onConsultationPreferenceChange={(value) => {
           dispatch({
             type: "SET_CONSULTATION_TYPE",

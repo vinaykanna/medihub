@@ -5,7 +5,6 @@ import Arrow from "@assets/icons/Arrow";
 import { useOnlineConsultationContext } from "@contexts/OnlineConsultationContext";
 import TextField from "@components/TextField";
 import { useState } from "react";
-import Modal from "@components/Modal";
 import EditPatient from "./EditPatient";
 import { useNavigate } from "react-router-dom";
 
@@ -64,6 +63,14 @@ function ExistingPatients() {
     });
   };
 
+  const handleSymptomsChange = (patientId, symptoms) => {
+    console.log(symptoms);
+    dispatch({
+      type: "SET_PATIENT_SYMPTOMS",
+      payload: { patientId, symptoms },
+    });
+  };
+
   const handleEdit = (patient) => {
     setSelectedPatientForEdit(patient);
     setShowEditPatientModal(true);
@@ -80,7 +87,7 @@ function ExistingPatients() {
           <h3 className="text-secondary-solid my-1 text-2xl font-bold font-nunito-bold">
             Select Existing Patient
           </h3>
-          {!!state.patient && (
+          {!!state.patients?.length > 0 && (
             <button
               onClick={() => navigate("/online-consultation/payment-details")}
               className={twJoin(
@@ -96,11 +103,14 @@ function ExistingPatients() {
           {patients.map((patient, index) => (
             <Patient
               key={index}
-              isSelected={patient.id === state.patient?.id}
+              isSelected={state?.patients?.some((p) => {
+                return p?.id === patient?.id;
+              })}
               onToggle={handlePatientToggle}
               patientDetails={patient}
               onEdit={handleEdit}
               onDelete={handleDelete}
+              onSymptomsChange={handleSymptomsChange}
             />
           ))}
         </main>
@@ -113,7 +123,14 @@ function ExistingPatients() {
   );
 }
 
-function Patient({ patientDetails, isSelected, onToggle, onEdit, onDelete }) {
+function Patient({
+  patientDetails,
+  isSelected,
+  onToggle,
+  onSymptomsChange,
+  onEdit,
+  onDelete,
+}) {
   return (
     <section
       className={twMerge(
@@ -159,6 +176,8 @@ function Patient({ patientDetails, isSelected, onToggle, onEdit, onDelete }) {
           required
           type="text"
           className="mt-5"
+          // value={patientDetails?.symptoms || ""}
+          onChange={(e) => onSymptomsChange(patientDetails?.id, e.target.value)}
         />
       )}
     </section>

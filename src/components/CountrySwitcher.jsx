@@ -18,6 +18,7 @@ function CountrySwitcher({ selected, onChange }) {
       >
         <img
           className="shadow-[0px_4px_10px_0px_#E77E3A33]"
+          srcSet={`https://flagcdn.com/w40/${activeItem.code.toLowerCase()}.png 2x`}
           src={`https://flagcdn.com/w20/${activeItem.code.toLowerCase()}.png`}
           alt=""
         />
@@ -25,7 +26,7 @@ function CountrySwitcher({ selected, onChange }) {
       </div>
       <div
         className={twMerge(
-          "absolute top-8 left-0 bg-white min-w-60 w-full hidden z-10",
+          "absolute top-8 left-0 bg-white min-w-60 w-full hidden",
           "rounded-xl max-h-60 overflow-y-auto shadow-[0px_4px_10px_0px_#E77E3A33]",
           open && "block"
         )}
@@ -35,7 +36,7 @@ function CountrySwitcher({ selected, onChange }) {
 
           return (
             <div
-              key={item.phone}
+              key={item.code}
               className={twJoin(
                 "flex items-center gap-2 cursor-pointer group",
                 "py-1 px-2 hover:bg-secondary-light",

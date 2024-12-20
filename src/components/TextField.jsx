@@ -58,7 +58,7 @@ function TextField(props) {
       {hasIcon && (
         <span
           className={twMerge(
-            "absolute top-1/2 -translate-y-1/2",
+            "absolute top-1/2 -translate-y-1/2 z-10",
             startIcon ? "left-3" : "right-3"
           )}
         >
