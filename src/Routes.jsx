@@ -4,12 +4,7 @@ import Login from "@pages/Login/Login";
 import PrivacyAndPolicy from "@pages/PrivacyAndPolicy/PrivacyAndPolicy";
 import TermsAndConditions from "@pages/TermsAndConditions/TermsAndConditions";
 import Welcome from "@pages/Welcome/Welcome";
-import {
-  Navigate,
-  Route,
-  Routes as Switch,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes as Switch, useLocation } from "react-router-dom";
 import Diagnostics from "@modules/diagnostics/Diagnostics";
 import InstantConsultation from "@modules/instant-consultation/InstantConsultation/InstantConsultation";
 import DoctorConsultation from "@modules/instant-consultation/DoctorConsultation/DoctorConsultation";
@@ -20,6 +15,7 @@ import { useEffect } from "react";
 import Home from "@pages/Home/Home";
 import Preferences from "@modules/instant-consultation/OnlineConsultation/Preferences/Preferences";
 import ConfirmBooking from "@modules/diagnostics/ConfirmBooking/ConfirmBooking";
+import Receipt from "@pages/Receipt/Receipt";
 
 function Routes() {
   const { pathname } = useLocation();
@@ -37,6 +33,7 @@ function Routes() {
       <Route path="/login" element={<Login />} />
       <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       <Route path="/privacy-policy" element={<PrivacyAndPolicy />} />
+      <Route path="/receipt/:receiptId" element={<Receipt />} />
       <Route path="/diagnostics">
         <Route path="package" element={<Diagnostics />} />
         <Route path="preferences" element={<ConfirmBooking />} />

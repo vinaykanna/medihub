@@ -19,11 +19,11 @@ const reducer = (state, action) => {
     }
 
     case "SELECT_PATIENT": {
-      const hasPatient = state.patients?.find(
+      const patientExists = state.patients?.some(
         (patient) => patient.id === action.payload.id
       );
 
-      if (hasPatient) {
+      if (patientExists) {
         return {
           ...state,
           patients: state.patients.filter((patient) => {
