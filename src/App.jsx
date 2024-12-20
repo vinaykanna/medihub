@@ -9,7 +9,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <OnlineConsultationProvider>
-        <BrowserRouter basename="medihub">
+        <BrowserRouter>
           <Routes />
         </BrowserRouter>
       </OnlineConsultationProvider>
