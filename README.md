@@ -1,4 +1,4 @@
-# Medihub Frontend
+# Medihub
 
 This is the Frontend for all the modules of MediHub
 
