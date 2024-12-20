@@ -5,7 +5,7 @@ import Footer from "@components/Footer";
 import Testimonials from "@modules/instant-consultation/InstantConsultation/components/Testimonials";
 import onlineConsultation from "@assets/images/online-consultation.jpg";
 import doctorConsultation from "@assets/images/doctor-consultation.jpg";
-import BookingCard from "@modules/instant-consultation/InstantConsultation/components/BookingCard";
+import ConsultationCard from "@modules/instant-consultation/InstantConsultation/components/ConsultationCard";
 
 function InstantConsultation() {
   return (
@@ -33,14 +33,14 @@ function InstantConsultation() {
           </article>
           <article className={twJoin("col-span-3")}>
             <div className="flex gap-5 -mb-10">
-              <BookingCard
+              <ConsultationCard
                 data={{
                   title: "Instant Doctor Booking",
                   img: onlineConsultation,
                   path: "/online-consultation/preferences",
                 }}
               />
-              <BookingCard
+              <ConsultationCard
                 data={{
                   title: "Book A Preferred Doctor ",
                   img: doctorConsultation,

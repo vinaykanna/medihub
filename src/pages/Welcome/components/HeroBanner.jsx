@@ -20,8 +20,13 @@ function HeroBanner() {
           <TextField
             placeholder="Location"
             startIcon={<img src={location} />}
+            inputClassName="placeholder:text-secondary-solid"
           />
-          <TextField placeholder="Search" startIcon={<img src={search} />} />
+          <TextField
+            placeholder="Search"
+            startIcon={<img src={search} />}
+            inputClassName="placeholder:text-secondary-solid"
+          />
         </div>
         <h3 className="text-xl mt-5 text-[#656565]">
           First Consultation is Free for Everyone.*

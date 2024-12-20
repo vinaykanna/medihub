@@ -1,40 +1,42 @@
 import React from "react";
-import avatar from "@assets/images/avatar.png";
+import doctor_male from "@assets/images/doctor_male.png";
+import doctor_female from "@assets/images/doctor_female.png";
+import { twJoin } from "tailwind-merge";
 
 const availableDoctors = [
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/male",
+    img: doctor_male,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/female",
+    img: doctor_female,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/male",
+    img: doctor_male,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/female",
+    img: doctor_female,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/male",
+    img: doctor_male,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/female",
+    img: doctor_female,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/male",
+    img: doctor_male,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/female",
+    img: doctor_female,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/male",
+    img: doctor_male,
   },
   {
-    img: "https://avatar.iran.liara.run/public/job/doctor/female",
+    img: doctor_female,
   },
 ];
 
-function BookingHeader() {
+function BookingHeader({ showAvailableDoctors }) {
   return (
     <div className="flex justify-between gap-10 items-center">
       <div className="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative gap-5">
@@ -80,28 +82,37 @@ function BookingHeader() {
           </p>
         </div>
       </div>
-      <div>
-        <h2 className="text-primary-solid font-bold font-nunito-bold text-2xl text-center">
-          General Physician that are available now
-        </h2>
-        <div className="flex justify-center mt-3 items-center">
-          {availableDoctors.slice(0, 6).map((doctor, index) => {
-            return (
-              <img
-                src={doctor.img}
-                className="-ml-2 w-[50px] h-[50px] border-2 border-[#EFEFEF] border-solid rounded-full"
-                key={index}
-              />
-            );
-          })}
-          <span className="text-[#747474] text-xl ml-2">
-            +{availableDoctors.slice(6).length}
-          </span>
-        </div>
-        <p className="text-[#656565] text-lg mt-[10px] text-center">
-          One of them will be assisting you.
-        </p>
+      {showAvailableDoctors && <AvailableDoctors />}
+    </div>
+  );
+}
+
+function AvailableDoctors() {
+  return (
+    <div>
+      <h2 className="text-primary-solid font-bold font-nunito-bold text-2xl text-center">
+        General Physician that are available now
+      </h2>
+      <div className="flex justify-center mt-3 items-center">
+        {availableDoctors.slice(0, 6).map((doctor, index) => {
+          return (
+            <img
+              src={doctor.img}
+              className={twJoin(
+                "-ml-2 w-[50px] h-[50px] rounded-full",
+                "border-2 border-[#EFEFEF] border-solid"
+              )}
+              key={index}
+            />
+          );
+        })}
+        <span className="text-[#747474] text-xl ml-2">
+          +{availableDoctors.slice(6).length}
+        </span>
       </div>
+      <p className="text-[#656565] text-lg mt-[10px] text-center">
+        One of them will be assisting you.
+      </p>
     </div>
   );
 }

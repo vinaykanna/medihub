@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 function TextField(props) {
@@ -10,6 +11,7 @@ function TextField(props) {
     className = "",
     inputClassName = "",
     label,
+    textArea,
     ...rest
   } = props;
   const hasIcon = startIcon || endIcon;
@@ -24,18 +26,35 @@ function TextField(props) {
           {label}
         </label>
       )}
-      <input
-        className={twMerge(
-          "px-4 py-2 border-[1px] border-primary-solid border-solid rounded-full bg-white outline-none placeholder:text-secondary-solid",
-          startIcon && "pl-10",
-          endIcon && "pr-10",
-          fullWidth && "w-full",
-          inputClassName
-        )}
-        type={type}
-        placeholder={placeholder}
-        {...rest}
-      />
+      {!textArea ? (
+        <input
+          className={twMerge(
+            "px-4 py-2 border-[1px] border-primary-solid border-solid",
+            "rounded-full bg-white outline-none placeholder:text-[#BDBDBD]",
+            startIcon && "pl-10",
+            endIcon && "pr-10",
+            fullWidth && "w-full",
+            inputClassName
+          )}
+          type={type}
+          placeholder={placeholder}
+          {...rest}
+        />
+      ) : (
+        <textarea
+          rows={1}
+          className={twMerge(
+            "px-4 py-2 border-[1px] border-primary-solid border-solid",
+            "rounded-full bg-white outline-none placeholder:text-[#BDBDBD] resize-none",
+            fullWidth && "w-full",
+            inputClassName
+          )}
+          type={type}
+          placeholder={placeholder}
+          {...rest}
+        />
+      )}
+
       {hasIcon && (
         <span
           className={twMerge(

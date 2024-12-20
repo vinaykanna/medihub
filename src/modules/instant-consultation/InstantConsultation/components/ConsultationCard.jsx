@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { twJoin } from "tailwind-merge";
-function BookingCard({ data }) {
+function ConsultationCard({ data }) {
   return (
     <article
       className={twJoin(
@@ -27,4 +27,4 @@ function BookingCard({ data }) {
   );
 }
 
-export default BookingCard;
+export default ConsultationCard;

@@ -1,6 +1,5 @@
 import AudioCall from "@assets/icons/AudioCall";
 import VideoCall from "@assets/icons/VideoCall";
-import { useOnlineConsultationContext } from "@contexts/OnlineConsultationContext";
 import { twJoin, twMerge } from "tailwind-merge";
 import doctor from "@assets/images/doctor.png";
 import location from "@assets/images/location2.svg";
@@ -9,21 +8,15 @@ import chat from "@assets/images/chat.svg";
 import firstAid from "@assets/images/first_aid.svg";
 import { useNavigate } from "react-router-dom";
 
-function ConsultationPreference() {
-  const { state, dispatch } = useOnlineConsultationContext();
+function BookingCard({ data, onConsultationPreferenceChange, className }) {
   const navigate = useNavigate();
 
-  const handleConsultationPreferenceChange = (value) => {
-    dispatch({
-      type: "SET_CONSULTATION_TYPE",
-      payload: value,
-    });
-  };
   return (
     <div
       className={twJoin(
-        "mx-20 mt-20 mb-10 p-8 shadow-[0px_4px_20px_0px_#E77E3A33]",
-        "border-[1px] border-primary-solid border-solid rounded-3xl"
+        "p-8 shadow-[0px_4px_20px_0px_#E77E3A33]",
+        "border-[1px] border-primary-solid border-solid rounded-3xl",
+        className
       )}
     >
       <header className="flex justify-between gap-10 items-center">
@@ -33,18 +26,18 @@ function ConsultationPreference() {
             Consult with a verified Doctor
           </p>
         </div>
-        {state?.specialization && (
+        {data?.specialization && (
           <div
             className="bg-secondary-light rounded-xl px-4 py-2 flex gap-5 items-center
           text-lg text-[#656565]"
           >
             <p className="font-bold font-nunito-bold">
-              {state?.specialization?.title}
+              {data?.specialization?.title}
             </p>
             <p>
               Final Fee -{" "}
               <span className="text-primary-solid">
-                &#8377; {state?.specialization?.price}
+                &#8377; {data?.specialization?.price}
               </span>
             </p>
           </div>
@@ -58,19 +51,19 @@ function ConsultationPreference() {
           id="video_call"
           icon={VideoCall}
           label="Video Consultation"
-          checked={state?.consultationType === "Video Consultation"}
-          onChange={handleConsultationPreferenceChange}
+          checked={data?.consultationType === "Video Consultation"}
+          onChange={onConsultationPreferenceChange}
         />
         <PreferenceType
           id="audio_call"
           icon={AudioCall}
           label="Tele-Consultation"
-          checked={state?.consultationType === "Tele-Consultation"}
-          onChange={handleConsultationPreferenceChange}
+          checked={data?.consultationType === "Tele-Consultation"}
+          onChange={onConsultationPreferenceChange}
         />
       </div>
-      {state.specialization && state.consultationType && <AvailableDoctor />}
-      {state.specialization && state.consultationType && (
+      {data?.specialization && data?.consultationType && <AvailableDoctor />}
+      {data?.specialization && data?.consultationType && (
         <div className="text-right mt-5">
           <button
             onClick={() => {
@@ -172,4 +165,4 @@ function AvailableDoctor() {
   );
 }
 
-export default ConsultationPreference;
+export default BookingCard;

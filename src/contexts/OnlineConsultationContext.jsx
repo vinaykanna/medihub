@@ -5,6 +5,7 @@ const OnlineConsultationContext = createContext(null);
 const initialState = {
   specialization: "",
   consultationType: null,
+  patient: null,
 };
 
 const reducer = (state, action) => {
@@ -13,6 +14,12 @@ const reducer = (state, action) => {
       return { ...state, specialization: action.payload };
     case "SET_CONSULTATION_TYPE":
       return { ...state, consultationType: action.payload };
+    case "SELECT_PATIENT":
+      if (state?.patient?.id === action.payload?.id) {
+        return { ...state, patient: null };
+      }
+
+      return { ...state, patient: action.payload };
     default:
       return state;
   }
