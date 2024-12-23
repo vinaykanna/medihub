@@ -1,11 +1,11 @@
 import React from "react";
 import { twJoin, twMerge } from "tailwind-merge";
 
-function Tabs({ tabItems, active, onClick }) {
+function Tabs({ tabItems, active, onClick,tabCount=3 }) {
   const activeIndex = tabItems?.findIndex((item) => item?.id === active);
 
   return (
-    <div className="grid grid-cols-3 justify-between relative items-start">
+    <div className={`grid grid-cols-${tabCount} justify-between relative items-start`}>
       {tabItems?.map((tabItem, index) => {
         const isActive = index <= activeIndex;
         return (

@@ -7,6 +7,8 @@ function SelectField({
   selectClassName,
   label,
   defaultOptionLabel = "Select",
+  onChange,
+  name,
   ...rest
 }) {
   return (
@@ -21,6 +23,8 @@ function SelectField({
       )}
       <div className="relative">
         <select
+          name={name}
+          onChange={onChange}
           className={twMerge(
             "px-4 py-2 border-[1px] border-primary-solid border-solid",
             "rounded-full bg-white outline-none text-[#BDBDBD]",
